@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" width="200px" height="150px" href="/Img/logo.png" />
+
+  <title>MM Fitness</title>
+
+  <!--       <link rel="stylesheet" type="text/css" href="CSS/style.css" />       -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&display=swap" rel="stylesheet" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Work+Sans:ital,wght@1,300&display=swap"
+    rel="stylesheet" />
+
+
+  <style>
+    body {
+      color: cornsilk;
+      background-image: linear-gradient(black, aquamarine);
+      height: auto;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0px;
+      padding: 0px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-family: "Work Sans", sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="fitness-calculator.css">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <!--  Left box for logo-->
+    <div class="left">
+      <a href="index.html"><img src="/Img/logo.png" height="70px" width="70px" alt="Logo" /></a>
+    </div>
+
+    <!--  mid box for navbar-->
+    <div class="mid">
+      <ul class="navbar">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="about us.html"> About us </a></li>
+        <li><a href="Fitness calculator.html"> Fitness calculator </a></li>
+        <li><a href="Contact us.html"> Contact us </a></li>
+      </ul>
+    </div>
+
+    <!--  right box for cta-->
+    <div class="right">
+      <button class="btn">Email us</button>
+    </div>
+  </header>
+
+
+
+  <h1>Fitness Calculators</h1>
+
+
+
+  <div class="container">
+    <div class="item" id="item-1">First</div>
+
+    <div class="item" id="item-2">
+
+
+      <h2 style="border-bottom: aquamarine 4px solid;margin: 20px auto;
+      width: 262px; padding: 10px 10px 10px 10px;">BMR calculator</h2>
+
+
+      <label for="age">Age</label>
+
+      <input type="text" name="age" id="age" placeholder="yrs" required><br>
+
+      <ul style="margin: 0px 0px 0px 0px;">
+        <h4 style="
+            margin: 10px 10px 10px 10px;
+            position: relative;
+            right: 110px;
+            padding: 10px 10px 0px 5px;">Gender:</h4>
+        <li style="list-style-type: none;
+        padding: 0px 0px 0px 10px;"> Male <input type="radio"
+            style="display: inline-block; padding: 1px 0px 0px 0px;margin: 4px 80px 1px -139px;" name="Gender" id="male"
+            value="male"> </li>
+
+        <li style="list-style-type: none; margin-bottom: 5px;"> Female<input type="radio"
+            style="display: inline-block; padding: 1px 0px 0px 0px;margin: 9px 74px 1px -154px;" name="Gender"
+            id="female" value="female">
+
+        </li>
+      </ul>
+      <!--  <label for="Gender"> Gender <br> 
+          Male<input type="radio" name="Gender" id="male" value="male"> <br> 
+        Female <input type="radio" name="Gender" id="female" value="female"></label>     -->
+
+
+      <label for="height">Height </label>
+      <input type="text" name="Height" id="height" placeholder="cms">
+
+
+      <label for="weight">Weight </label><input type="text" name="weight" id="weight" placeholder="kgs" required>
+
+      <!--<button type="button" onclick="bmr();">Calculate</button><br>-->
+      <input type="button" style="width: 280px;" value="Calculate" onclick="bmr() ;" />
+
+      <p id="bmr"> Your BMR is: </p>
+
+
+      <script>
+
+
+        function bmr() {
+
+          var weight = document.getElementById("weight").value;
+          var height = document.getElementById("height").value;
+          var age = document.getElementById("age").value;
+
+          document.getElementById("bmr").innerHTML = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+
+        }
+
+
+
+      </script>
+
+    </div>
+
+    <div class="item" id="item-3">Third</div>
+
+  </div>
+
+</body>
+
+</html>
